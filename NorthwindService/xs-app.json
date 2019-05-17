@@ -1,0 +1,21 @@
+{
+  "welcomeFile": "/NorthwindService/test/flpSandbox.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/NorthwindOData/(.*)$",
+      "target": "$1",
+      "authenticationType": "none",
+      "destination": "NorthwindOData",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/NorthwindService/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    }
+  ]
+}
